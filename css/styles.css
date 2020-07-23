@@ -1,0 +1,64 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 23, 2018, 4:21:55 PM
+    Author     : apary
+*/
+
+body {
+    background-color: #75a9f5;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.listscolor:nth-child(even) {
+    background-color: lightblue;
+}
+
+.listscolor:nth-child(odd) {
+    background-color: lightcyan;
+}
+
+input[type=checkbox] {
+    float:left;
+    width:10px
+}
+
+.clearfloat {
+    clear:left;
+}
+
+main {
+    padding-top: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+nav {
+    background-color: darkblue;
+}
+/*
+.floatRight {
+    float:right;
+}
+*/
+.mobileResize {
+    min-width: 50px;
+    max-width: 40%;
+    height: auto;
+    width:70%;
+    float: right;
+    padding-left: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.wrapper {
+    width: 60%;
+    float: left;
+}
