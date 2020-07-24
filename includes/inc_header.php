@@ -33,7 +33,6 @@ and open the template in the editor.
         ?>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar_brand" href="index.php"><img src="./img/notepad.svg" width="30"></a>
-            <!--<div class="collapse navbar-collapse" id="navbarNavDropdown">-->
             <ul class="nav nav-pills">
                 <!-- add php code to move the active class around -->
                 <li class="nav-item<?php if($pageTitle == 'Home'){ echo " active";}?>">
