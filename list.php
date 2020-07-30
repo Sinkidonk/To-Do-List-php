@@ -9,6 +9,8 @@ require './includes/listsClass.php';
 <main>
 
     <?php
+	/* as future me is now reading this code over to remake the database I relized I should
+	had added more comments to make it easier to read */
     if (!empty($_SESSION['userID'])) {
         $stmt = $db->prepare("SELECT * FROM tasks WHERE userID=:id");
         $stmt->execute([":id" => $_SESSION['userID']]);
@@ -26,7 +28,7 @@ require './includes/listsClass.php';
                     $addStmt = $db->prepare($addSql);
 
                     $addStmt->execute([":id" => $_SESSION['userID'], ":list" => $enteredInput, ":done" => 0]);
-                    print_r($addStmt);
+                    
                     Header('Location: ' . $_SERVER['PHP_SELF']); // To keep from getting dups in the database
                 }
             }
@@ -68,7 +70,7 @@ require './includes/listsClass.php';
                 Header('Location: ' . $_SERVER['PHP_SELF']); // To keep from getting dups in the database
 
 
-                //print_r(count($checkedList));
+                
             }
         }
         /* Add if statment to check if user have any data from the select statement
@@ -82,7 +84,7 @@ require './includes/listsClass.php';
             $listClass = new listsClass();
             for ($x = 0; $x <= count($list) - 1; $x++) {
                 
-                //var_dump($x);
+                
                 echo '<div class="form-group listscolor">';
                 echo '<input type="checkbox" class="form-control" name="listItem[]" value="' . $list[$x]['id'] . '">';
                 echo '<span class="' . $listClass->markAsDone($list[$x]['done']) . ' clearfloat">' . $list[$x]['lists'] . '</span>';

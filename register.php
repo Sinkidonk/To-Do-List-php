@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form submission
     $passwd = $_POST["password"];
     $passwdVerify = $_POST['verifyPassword'];
 //$verifyPassword = $_POST["verifyPassword"];
-//var_dump($verifyPassword);
+
     
     /* Add valideate to this page */
     
@@ -29,14 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Handle the form submission
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
 
-    /* $stmt = $db->query("SELECT username FROM user_info WHERE username='?'");
-      $stmt->execute([$username]);
-      $user = $stmt->fetch(PDO::FETCH_ASSOC);
-     */
-    echo '<br><br>';
-    print_r($user['username']);
-    echo '<br><br>';
-    //var_dump($stmt);
+
     if ($user['username'] == $username) {
         echo 'user already exist';
         

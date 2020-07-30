@@ -1,13 +1,6 @@
 <?php
 session_start();
-/*
-if ($_SESSION) {
-    setcookie("id", $_SESSION['userID'], time() + (86400 * 30), "/"); // 86400 = 1 day
-    setcookie("user", $_SESSION['username'], time() + (86400 * 30), "/"); // 86400 = 1 day
-    setcookie("fName", $_SESSION['fName'], time() + (86400 * 30), "/"); // 86400 = 1 day
-    setcookie("lName", $_SESSION['lName'], time() + (86400 * 30), "/"); // 86400 = 1 day
-}
- */
+
 require 'includes/pdo_connect.php';
 $pageTitle = "Home";
 

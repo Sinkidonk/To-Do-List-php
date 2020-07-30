@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->execute([":username" => $username]);
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
     
-    //print_r($user);
+
     if (empty($user)) {
         echo "Username don't exist";
     } elseif ((($user["username"] == $username) && ($encryptpasswd == $user["password"]))) {
