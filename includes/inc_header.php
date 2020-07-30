@@ -20,17 +20,7 @@ and open the template in the editor.
         <!-- code from unit 9 apply -->
     </head>
     <body>
-                <?php
-                /*
-        if ($db) {
-            echo "<p>Connection successful.</p>";
-        } elseif (isset($error)) {
-            echo "<p>$error</p>";
-        }
-                 * 
-                 */
-       //print_r($_SESSION);
-        ?>
+
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar_brand" href="index.php"><img src="./img/notepad.svg" width="30"></a>
             <ul class="nav nav-pills">
